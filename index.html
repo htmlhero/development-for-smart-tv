@@ -19,17 +19,72 @@
 	</header>
 
 	<section id="cover" class="slide cover w"><div>
-		<h2>Разработка приложений<br />для Smart TV</h2>
+		<h2>
+			<span class="cover-shadow">
+				Разработка приложений<br />
+			</span>
+			<span class="tv">
+				<span class="tv__stroke cover-shadow">
+					для Smart TV
+				</span>
+				<span class="tv__noise">
+					для Smart TV
+				</span>
+			</span>
+		</h2>
 		<img src="pictures/cover.jpg" alt="">
 		<style>
 			#cover h2 {
 				font-size: 85px;
 				line-height: 1.25;
-				color: #FFF;
+				color: #fff;
 				text-align: center;
-				text-shadow: 0 0 20px #000;
 				margin: 130px 0 0;
 			}
+			.cover-shadow {
+				text-shadow: 0 0 20px #000;
+			}
+			@keyframes grain {
+				0% {
+					background-position: 300px 0;
+				}
+				20% {
+					background-position: -250px 50px;
+				}
+				40% {
+					background-position: 200px -100px;
+				}
+				60% {
+					background-position: -150px 150px;
+				}
+				80% {
+					background-position: 100px 200px;
+				}
+				100% {
+					background-position: -50px -250px;
+				}
+			}
+			.tv {
+				display: inline-block;
+				position: relative;
+			}
+				.tv__noise {
+					background-image: url(http://api.thumbr.it/whitenoise-300x300.png?background=ffffff&noise=505050&density=50&opacity=100);
+					background-size: 400px 300px;
+					display: block;
+					position: relative;
+					animation: grain 2.5s steps(5) infinite;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+				.tv__stroke {
+					display: block;
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+				}
 		</style>
 	</div></section>
 
