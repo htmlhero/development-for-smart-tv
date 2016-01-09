@@ -13,13 +13,14 @@
 		<p><a href="http://htmlhero.ru">Андрей Мотошин</a></p>
 	</header>
 
-	<section class="slide black cover-image">
+	<section class="slide black">
+		<img class="cover w" src="pictures/cover.jpg" alt="" />
 		<h2 class="cover-title">
-			<span class="cover-shadow">
+			<span class="cover-title__shadow">
 				Разработка приложений<br />
 			</span>
 			<span class="tv">
-				<span class="tv__stroke cover-shadow">
+				<span class="tv__stroke cover-title__shadow">
 					для Smart TV
 				</span>
 				<span class="tv__noise">
@@ -28,10 +29,6 @@
 			</span>
 		</h2>
 		<style>
-			.cover-image {
-				background: url(pictures/cover.jpg);
-				background-size: cover;
-			}
 			.cover-title {
 				font-size: 85px !important;
 				line-height: 1.25 !important;
@@ -39,9 +36,9 @@
 				text-align: center;
 				margin: 130px 0 0;
 			}
-			.cover-shadow {
-				text-shadow: 0 0 20px #000;
-			}
+				.cover-title__shadow {
+					text-shadow: 0 0 20px #000;
+				}
 			@keyframes grain {
 				0% {
 					background-position: 300px 0;
