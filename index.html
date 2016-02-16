@@ -13,56 +13,87 @@
 		<p><a href="http://htmlhero.ru">Андрей Мотошин</a></p>
 	</header>
 
+	<style>
+		@font-face {
+			font-family: 'Roboto';
+			src: url(fonts/Roboto-Regular.ttf);
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url(fonts/Roboto-Bold.ttf);
+			font-weight: bold;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url(fonts/Roboto-Italic.ttf);
+			font-weight: normal;
+			font-style: italic;
+		}
+		@font-face {
+			font-family: 'Roboto';
+			src: url(fonts/Roboto-BoldItalic.ttf);
+			font-weight: bold;
+			font-style: italic;
+		}
+		@font-face {
+			font-family: 'RobotoCondensed';
+			src: url(fonts/RobotoCondensed-Regular.ttf);
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'RobotoCondensed';
+			src: url(fonts/RobotoCondensed-Bold.ttf);
+			font-weight: bold;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'RobotoCondensed';
+			src: url(fonts/RobotoCondensed-Italic.ttf);
+			font-weight: normal;
+			font-style: italic;
+		}
+		@font-face {
+			font-family: 'RobotoCondensed';
+			src: url(fonts/RobotoCondensed-BoldItalic.ttf);
+			font-weight: bold;
+			font-style: italic;
+		}
+		.shower {
+			font-family: 'Roboto', sans-serif;
+		}
+		.caption h1,
+		.slide h2 {
+			font-family: 'RobotoCondensed', sans-serif;
+		}
+		.slide .shout {
+			font-size: 115px;
+		}
+	</style>
+
 	<section class="slide black">
-		<img class="cover w" src="pictures/cover.jpg" alt="" />
+		<img class="cover h" src="pictures/cover.jpg" alt="" />
 		<h2 class="cover-title">
-			<span class="cover-title__shadow">
-				Разработка приложений
+			<span class="cover-title__dev">
+				Разработка приложений для
 			</span>
-			<span class="tv">
-				<span class="tv__stroke cover-title__shadow">
-					для Smart TV
-				</span>
-				<span class="tv__noise">
-					для Smart TV
-				</span>
+			<span class="cover-title__tv tv">
+				Smart TV
 			</span>
 		</h2>
 		<style>
 			.tv {
+				background-image: url(img/whitenoise-300x300.png);
+				background-size: 400px 300px;
+				display: block;
 				position: relative;
+				animation: grain 2.5s steps(5) infinite;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
 			}
-				.tv__noise {
-					background-image: url(http://api.thumbr.it/whitenoise-300x300.png?background=ffffff&noise=505050&density=50&opacity=100);
-					background-size: 400px 300px;
-					display: block;
-					position: relative;
-					animation: grain 2.5s steps(5) infinite;
-					-webkit-background-clip: text;
-					-webkit-text-fill-color: transparent;
-				}
-				.tv__stroke {
-					display: block;
-					position: absolute;
-					top: 0;
-					right: 0;
-					bottom: 0;
-					left: 0;
-				}
-
-			.cover-title {
-				font-size: 85px !important;
-				line-height: 1.25 !important;
-				color: #fff !important;
-				text-align: center;
-				margin: 130px 0 0;
-			}
-				.cover-title__shadow {
-					text-shadow: 0 0 20px #000;
-				}
-				.cover-title .tv {
-					display: block;
-				}
 			@keyframes grain {
 				0% {
 					background-position: 300px 0;
@@ -83,143 +114,287 @@
 					background-position: -50px -250px;
 				}
 			}
+
+			@font-face {
+				font-family: 'RobotoLight';
+				src: url(fonts/Roboto-Light.ttf);
+			}
+			@font-face {
+				font-family: 'RobotoBlack';
+				src: url(fonts/Roboto-Black.ttf);
+			}
+			.cover-title {
+				font-weight: normal !important;
+				color: #fff !important;
+				text-align: center;
+				margin: 110px 0 0;
+			}
+				.cover-title__dev {
+					font-family: 'RobotoLight';
+					font-size: 47.5px;
+					margin-left: 10px;
+				}
+				.cover-title__tv {
+					font-family: 'RobotoBlack';
+					font-size: 150px;
+					margin-top: 20px;
+				}
 		</style>
 	</section>
 
 	<section class="slide">
-		<h2 class="shout shrink">Smart TV</h2>
+		<h2 class="shout">Что такое?</h2>
 	</section>
-
 	<section class="slide white">
-		<img class="cover h" src="pictures/smart-tv.jpg" alt="">
+		<img class="cover h" src="pictures/pc.jpg" alt="">
 	</section>
-
 	<section class="slide">
-		<h2>Популярные Smart TV платформы:</h2>
-		<ol>
-			<li>Samsung</li>
-			<li>LG</li>
-			<li>Philips</li>
-			<li>Panasonic</li>
-		</ol>
-	</section>
-
-	<section class="slide">
-		<h2 class="shout shrink">Set-top box</h2>
-	</section>
-
-	<section class="slide white">
-		<img class="cover w" src="pictures/stb.jpg" alt="">
-	</section>
-
-	<section class="slide">
-		<h2>Популярные Set-top box платформы:</h2>
-		<ol>
-			<li>Dune</li>
-			<li>Eltex</li>
-			<li>Mag</li>
-			<li>Amino</li>
-		</ol>
-	</section>
-
-	<section class="slide">
-		<h2>Что внутри?</h2>
+		<h2>Популярные Smart TV платформы</h2>
 		<ul>
-			<li class="next">ARM, флеш-память</li>
-			<li class="next">Linux</li>
-			<li class="next">Webkit, Presto</li>
-			<li class="next">HTML, CSS, Javascript</li>
+			<li><strong>Samsung:</strong> Orsay, Tizen</li>
+			<li><strong>LG:</strong> NetCast, WebOS</li>
+			<li><strong>Sony:</strong> Sony Internet TV, Android TV</li>
+			<li><strong>Philips:</strong> Net TV, Android TV</li>
+			<li><strong>Panasonic:</strong> Viera Cast/Connect, Life+Screen, Firefox OS</li>
+		</ul>
+	</section>
+	<section class="slide white">
+		<img class="cover h" src="pictures/tizen.jpg" alt="">
+	</section>
+	<section class="slide white">
+		<img class="cover h" src="pictures/webos.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>Популярные STB платформы</h2>
+		<ul>
+			<li><strong>Ростелеком:</strong> Mag, IPTV, Motorola, Smartlabs</li>
+			<li><strong>Билайн:</strong> Cisco, Motorola, Tatung</li>
+			<li><strong>Дом.ru:</strong> Humax</li>
+			<li><strong>ТТК:</strong> Eltex</li>
+		</ul>
+		<p>
+			<strong>Ещё:</strong>
+			<br />
+			Dune HD, IconBIT, Aura HD, Amino, Amazon Fire TV, Nexus Player, Roku, Apple TV.
+		</p>
+	</section>
+	<section class="slide white">
+		<img class="cover w" src="pictures/dune-hd-tv-102.jpg" alt="">
+	</section>
+	<section class="slide black">
+		<img class="cover w" src="pictures/dune-hd-interface.png" alt="">
+	</section>
+	<section class="slide">
+		<h2>Характеристики Dune HD TV-102</h2>
+		<ul>
+			<li><strong>Процессор:</strong> 700 MHz</li>
+			<li><strong>Память RAM:</strong> 512 MB</li>
+			<li><strong>Флеш-память:</strong> 256 MB</li>
+			<li><strong>Операционная система:</strong> Linux</li>
+			<li><strong>Браузер:</strong> на WebKit или Presto</li>
 		</ul>
 	</section>
 
 	<section class="slide">
-		<h2 class="shout shrink">Достоинства<br />и недостатки</h2>
+		<h2 class="shout">И?</h2>
 	</section>
-
-	<section class="slide">
-		<h2>Трудности при разработке:</h2>
-		<ol>
-			<li class="next">Низкое быстродействие</li>
-			<li class="next">Отсутствие средств отладки</li>
-			<li class="next">Ограничение на кросс-доменные запросы</li>
-			<li class="next"><a href="http://ru.wikipedia.org/wiki/%D0%92%D1%8B%D0%BB%D0%B5%D1%82%D1%8B_%D1%80%D0%B0%D0%B7%D0%B2%D1%91%D1%80%D1%82%D0%BA%D0%B8">Оверскан</a></li>
-		</ol>
-	</section>
-
 	<section class="slide white">
-		<img class="cover w" src="pictures/overscan.jpg" alt="">
+		<div class="html-css-js">
+			<div class="html-css-js__col _html">
+				<div class="html-css-js__icon">&lt;/&gt;</div>
+				<div class="html-css-js__title">.html</div>
+			</div>
+			<div class="html-css-js__col _css">
+				<div class="html-css-js__icon">{ }</div>
+				<div class="html-css-js__title">.css</div>
+			</div>
+			<div class="html-css-js__col _js">
+				<div class="html-css-js__icon">{;}</div>
+				<div class="html-css-js__title">.js</div>
+			</div>
+		</div>
+		<style>
+			.html-css-js {
+				display: flex;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+				.html-css-js__col {
+					color: #fff;
+					text-align: center;
+					flex: 1;
+				}
+				.html-css-js__col._html {
+					background: #539dc4;
+				}
+				.html-css-js__col._css {
+					background: #9682bd;
+				}
+				.html-css-js__col._js {
+					background: #97be5d;
+				}
+				.html-css-js__icon {
+					font-size: 150px;
+					margin-top: 100px;
+				}
+				.html-css-js__title {
+					font-size: 80px;
+					margin-top: -50px;
+				}
+		</style>
 	</section>
 
 	<section class="slide">
-		<h2>Трудности при разработке:</h2>
-		<ol>
-			<li>Низкое быстродействие</li>
-			<li>Отсутствие средств отладки</li>
-			<li>Ограничение на кросс-доменные запросы</li>
-			<li><a href="http://ru.wikipedia.org/wiki/%D0%92%D1%8B%D0%BB%D0%B5%D1%82%D1%8B_%D1%80%D0%B0%D0%B7%D0%B2%D1%91%D1%80%D1%82%D0%BA%D0%B8">Оверскан</a></li>
-			<li>Обратная навигация</li>
-			<li class="next">Разнообразные устройства ввода</li>
-		</ol>
+		<h2 class="shout">Какие проблемы?</h2>
 	</section>
-
+	<section class="slide">
+		<h2>Различия платформ</h2>
+		<strong>Отличаются:</strong>
+		<ul>
+			<li>Файловая структура приложения</li>
+			<li>API встроенных оъектов</li>
+			<li>Коды клавиш</li>
+		</ul>
+		<p class="next">
+			<strong>Решение:</strong>
+			<br />Разделять на этапе сборки
+		</p>
+	</section>
+	<section class="slide">
+		<h2>Низкое быстродействие</h2>
+		<ul class="next">
+			<li>Чем меньше нод — тем лучше</li>
+			<li><code>div</code> и <code>span</code> — еще лучше</li>
+			<li>Использовать короткие селекторы, селекторы по классам</li>
+			<li>Меньше CSS3</li>
+			<li>Использовать <del>jQuery</del> VanillaJS и полифиллы</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Удаленная отладка</h2>
+		<ul class="next">
+			<li><a href="http://www.opera.com/dragonfly/">Opera Dragonfly</a></li>
+			<li><a href="http://people.apache.org/~pmuellr/weinre/">Weinre</a></li>
+			<li><a href="http://vorlonjs.com/">Vorlon.JS</a></li>
+			<li><a href="http://npmjs.com/package/zb-log-server">Zombiebox Log Server</a></li>
+		</ul>
+	</section>
 	<section class="slide white">
-		<img class="cover h" src="pictures/remotes.jpg" alt="">
+		<img class="cover h" src="pictures/opera-dragonfly.png" alt="">
 	</section>
-
-	<section class="slide">
-		<h2>Трудности при разработке:</h2>
-		<ol>
-			<li>Низкое быстродействие</li>
-			<li>Отсутствие средств отладки</li>
-			<li>Ограничение на кросс-доменные запросы</li>
-			<li><a href="http://ru.wikipedia.org/wiki/%D0%92%D1%8B%D0%BB%D0%B5%D1%82%D1%8B_%D1%80%D0%B0%D0%B7%D0%B2%D1%91%D1%80%D1%82%D0%BA%D0%B8">Оверскан</a></li>
-			<li>Обратная навигация</li>
-			<li>Разнообразные устройства ввода</li>
-			<li>Различия платформ</li>
-		</ol>
-	</section>
-
-	<section class="slide">
-		<h2>Smart TV фреймворки:</h2>
-		<ol class="next">
-			<li><a href="http://npmjs.org/package/zombiebox">Zombiebox</a></li>
-			<li><a href="http://github.com/immosmart/smartbox">SmartBox</a></li>
-			<li><a href="http://fmtvp.github.io/tal">T.A.L.</a></li>
-			<li><a href="http://nexx.tv/en/products/nexxone">NexxOne</a></li>
-			<li><a href="http://framework.joshfire.com">Joshfire</a></li>
-		</ol>
-	</section>
-
 	<section class="slide white">
-		<img class="cover w" src="pictures/zombiebox.jpg" alt="">
+		<img class="cover h" src="pictures/weinre.png" alt="">
+	</section>
+	<section class="slide white">
+		<img class="cover h" src="pictures/vorlonjs.png" alt="">
+	</section>
+	<section class="slide">
+		<h2>Zombiebox Log Server</h2>
+
+		<pre>
+			<strong>В коде пишем:</strong>
+			<code>zb.console.setLogger(new zb.console.Remote({
+	url: <mark>'http://192.168.1.140:1337/log'</mark>
+}));</code>
+			<code>zb.console.log('event fired');</code>
+		</pre>
+
+		<p>
+			<strong>В терминале получаем:</strong>
+			<br /><code style="background: #000; color: #fff;">17:52:08.706 17:52:08.712 [LOG] event fired</code>
+		</p>
+	</section>
+	<section class="slide">
+		<h2>Разнообразие устройств ввода</h2>
+		<img class="cover h" src="pictures/input.jpg" alt="">
 	</section>
 
 	<section class="slide">
-		<h2>Достоинства Zombiebox:</h2>
+		<h2 class="shout">Есть что?</h2>
+	</section>
+	<section class="slide white">
+		<a href="http://npmjs.com/package/zombiebox">
+			<img class="cover w" src="pictures/zombiebox.jpg" alt="">
+		</a>
+	</section>
+	<section class="slide">
+		<h2>Фреймворк Zombiebox</h2>
 		<ol>
-			<li class="next">Быстродействие</li>
-			<li class="next">Кроссплатформенность</li>
-			<li class="next">Быстрая скорость разработки</li>
-			<li class="next">Высокое качество разрабатываемого продукта</li>
-			<li class="next">Поддержка истории перемещений</li>
+			<li>Быстрый</li>
+			<li>Безопасный</li>
+			<li>Кроссплатформенный</li>
+			<li>Обеспечивает высокое качество кода</li>
+			<li>Имеет набор готовых решений</li>
 		</ol>
 	</section>
-
 	<section class="slide">
-		<h2 class="shout shrink">Публикация</h2>
+		<h2 class="shout"><a href="http://npmjs.com/package/zombiebox-extension-ui">Zombiebox UI</a></h2>
+	</section>
+	<section class="slide">
+		<h2>Библиотека компонентов Zombiebox UI</h2>
+		<ul style="margin-bottom: 0;">
+			<li>Списки</li>
+			<li>Кнопки</li>
+			<li>Поля ввода</li>
+			<li>Клавиатура</li>
+			<li>Контролы плеера</li>
+		</ul>
+		<p class="note">
+			и другие&hellip;
+		</p>
+	</section>
+	<section class="slide">
+		<h2 class="shout"><a href="http://npmjs.com/package/zombiebox-extension-pixelperfect">PixelPerfect</a></h2>
+	</section>
+	<section class="slide black">
+		<img class="cover w" src="pictures/pixel-perfect.jpg" alt="">
+	</section>
+	<section class="slide black">
+		<a href="http://github.com/ifaced/app-launcher">
+			<img class="cover h" src="pictures/app-launcher-logo.png" alt="" />
+		</a>
+	</section>
+	<section class="slide white">
+		<img class="cover w" src="pictures/app-launcher-screen.png" alt="">
 	</section>
 
 	<section class="slide">
-		<h2>Воркфлоу:</h2>
-		<ol>
-			<li class="next">Определить версию браузера на устройстве</li>
-			<li class="next">Скачать ближайшую версию браузера для компьютера</li>
-			<li class="next">Скачать SDK</li>
-			<li class="next">Выбрать фреймворк или его отсутствие</li>
-			<li class="next">Разработать приложение согласно рекомендациям</li>
-			<li class="next">Протестировать на своем компьютере, в эмуляторе, на устройстве</li>
-			<li class="next">Опубликовать</li>
-		</ol>
+		<h2 class="shout">Когда конец?</h2>
+	</section>
+	<section class="slide white">
+		<div class="publish-place">
+			<a href="http://seller.samsungapps.com/">
+				<img width="450" src="pictures/samsung-logo.svg" alt="" />
+			</a>
+			<a href="http://seller.lgappstv.com/">
+				<img width="300" src="pictures/lg-logo.svg" alt="" />
+			</a>
+		</div>
+		<style>
+			.publish-place {
+				text-align: center;
+				margin-top: 140px;
+			}
+				.publish-place a {
+					background: none;
+				}
+				.publish-place a:first-child {
+					margin-right: 50px;
+				}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Ссылки</h2>
+		<ul>
+			<li><a href="http://en.wikipedia.org/wiki/List_of_smart_TV_platforms_and_middleware_software">List of smart TV platforms and middleware software</a></li>
+			<li><a href="http://www.imena.ua/blog/dune-hd-tv-102-test/">Мы тестируем: медиаплеер Dune HD TV-102</a></li>
+			<li><a href="http://interfaced.ru/materials.html">Материалы Interfaced</a></li>
+			<li><a href="http://habrahabr.ru/company/microsoft/blog/263149/">Знакомимся с Vorlon.js</a></li>
+		</ul>
 	</section>
 
 	<section class="slide">
@@ -227,7 +402,6 @@
 		<p>Андрей Мотошин</p>
 		<ul>
 			<li><a href="http://htmlhero.ru">htmlhero.ru</a></li>
-			<li><a href="http://twitter.com/htmlhero_ru">@htmlhero_ru</a></li>
 			<li><a href="mailto:andrew@htmlhero.ru">andrew@htmlhero.ru</a></li>
 		</ul>
 	</section>
